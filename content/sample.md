@@ -20,7 +20,7 @@ Here are the projects with their submitted work product links:
 
 ### 1. Generic Framework to turn legacy drivers consisting of CUPS filters and PPDs into Printer Applications
 
-Student: Dheeraj Yadav<br>
+Student: Dheeraj Yadav <br>
 Mentor: Till Kamppeter<br>
 [Work Product](https://gist.github.com/dheeraj135/852733a6944d2f7ede670fe9d3d0ac6a)
 
