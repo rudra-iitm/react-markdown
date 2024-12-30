@@ -38,7 +38,8 @@ const tableOfContents = [
   },
 ]
 
-export default async function PostPage({ params }: { params: { post_url: string } }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default async function PostPage({ params }: any ) {
   const { post_url } = params;
   const markdownPath = path.join(process.cwd(), 'content', `${post_url}.md`);
   let content = '';
