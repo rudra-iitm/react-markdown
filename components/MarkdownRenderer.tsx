@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 
@@ -12,7 +12,6 @@ interface MarkdownRendererProps {
 }
 
 const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
-  
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
@@ -23,7 +22,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
           const match = /language-(\w+)/.exec(className || '');
           return !inline && match ? (
             <SyntaxHighlighter
-              style={tomorrow}
+              style={vscDarkPlus}
               language={match[1]}
               PreTag="div"
               {...props}
@@ -37,10 +36,12 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
           );
         },
       }}
+      className="markdown-body dark"
     >
       {content}
     </ReactMarkdown>
   );
 };
 
-export  { MarkdownRenderer };
+export { MarkdownRenderer };
+
